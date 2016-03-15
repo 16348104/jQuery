@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery/jquery-1.12.1.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="red">立正，向我这边看齐</div>
+<div class="green">我先歇歇脚</div>
+
+<script type="text/javascript">
+    var $redHTML = $(".red .green").html();
+    $(".red .green").html($redHTML);
+</script>
+</body>
+</html>

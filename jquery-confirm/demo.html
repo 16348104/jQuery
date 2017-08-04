@@ -5,13 +5,13 @@
     <title>jQuery-confirm</title>
     <link rel="stylesheet" href="css/jquery-confirm.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-3.3.css"/>
-    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery-confirm.min.js"></script>
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"></script>-->
   <!--  <script type="text/javascript">
-        $('#example').click(function () {
+        $('#example1').click(function () {
             $.alert({
                 title: '通知!',
                 content: 'Simple alert!',
@@ -22,14 +22,21 @@
 <body>
 <div class="container-fluid">
     <script type="text/javascript">
-        function test_alert(){
+        function ybj_alert(){
             $.alert({
                 title: '停止云笔记服务的通知!',
-                content: '各位老师、同学：大家好！由于新版网络学堂云笔记服务器搬迁，将于2017年9月30日(星期六)停止新版网络学堂的云笔记服务。请您尽快下载云笔记中的附件。由此给您带来不便,敬请谅解',
+                content: '各位老师、同学：由于新版网络学堂云笔记服务器搬迁，将于2017年9月30日(星期六)停止新版网络学堂的云笔记服务。请您尽快下载云笔记中的附件。由此给您带来不便,敬请谅解',
+            });
+        }
+        function wp_alert(){
+            $.alert({
+                title: '停止网盘服务的通知!',
+                content: '各位老师、同学：由于新版网络学堂网盘服务器搬迁，将于2017年9月30日(星期六)停止新版网络学堂的网盘服务。请您尽快下载个人网盘中的附件。由此给您带来不便,敬请谅解',
             });
         }
     </script>
-    <button class="btn btn-primary" id="example" onclick="test_alert()">example alert</button>
+    <button class="btn btn-primary" id="example1" onclick="ybj_alert()">云笔记 alert</button>
+    <button class="btn btn-primary" id="example2" onclick="wp_alert()">网盘 alert</button>
 </div>
 </body>
 </html>

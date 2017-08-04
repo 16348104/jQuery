@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-confirm</title>
+    <link rel="stylesheet" href="css/jquery-confirm.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-3.3.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-confirm.min.js"></script>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"></script>-->
+  <!--  <script type="text/javascript">
+        $('#example').click(function () {
+            $.alert({
+                title: '通知!',
+                content: 'Simple alert!',
+            });
+        });
+    </script>-->
+</head>
+<body>
+<div class="container-fluid">
+    <script type="text/javascript">
+        function test_alert(){
+            $.alert({
+                title: '通知!',
+                content: 'Simple alert!',
+            });
+        }
+    </script>
+    <button class="btn btn-primary" id="example" onclick="test_alert()">example alert</button>
+</div>
+</body>
+</html>

@@ -17,6 +17,33 @@
                 content: 'Simple alert!',
             });
         });
+
+        $('#example3').on('click', function () {
+            $.confirm({
+                title: 'Confirm!',
+                content: 'Simple confirm!',
+                buttons: {
+                    confirm: function () {
+                        $.alert('Confirmed!');
+                    },
+                    cancel: function () {
+                        $.alert('Canceled!');
+                    },
+                    somethingElse: {
+                        text: 'Something else',
+                        btnClass: 'btn-blue',
+                        keys: [
+                            'enter',
+                            'shift'
+                        ],
+                        action: function () {
+                            this.$content // reference to the content
+                            $.alert('Something else?');
+                        }
+                    }
+                }
+            });
+        })
     </script>-->
 </head>
 <body>
@@ -34,9 +61,40 @@
                 content: '各位老师、同学：由于新版网络学堂网盘服务器搬迁，将于2017年9月30日(星期六)停止新版网络学堂的网盘服务。请您尽快下载个人网盘中的附件。由此给您带来不便,敬请谅解',
             });
         }
+        function test_confirm() {
+            $.confirm({
+                title: 'Confirm!',
+                content: 'Simple confirm!',
+                buttons: {
+                    confirm: function () {
+                        $.alert('Confirmed!');
+                    },
+                    cancel: function () {
+                        $.alert('Canceled!');
+                    },
+/*
+                    somethingElse: {
+                        text: 'Something else',
+                        btnClass: 'btn-blue',
+                        keys: [
+                            'enter',
+                            'shift'
+                        ],
+                        action: function () {
+                            this.$content // reference to the content
+                            $.alert('Something else?');
+                        }
+                    }
+*/
+                }
+            });
+        }
+
+
     </script>
     <button class="btn btn-primary" id="example1" onclick="ybj_alert()">云笔记 alert</button>
     <button class="btn btn-primary" id="example2" onclick="wp_alert()">网盘 alert</button>
+    <button class="btn btn-primary" id="example3" onclick="test_confirm()">Confirm</button>
 </div>
 </body>
 </html>
